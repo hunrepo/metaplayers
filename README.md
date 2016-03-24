@@ -1,0 +1,1 @@
+Összegyűjtött metaplayerek
