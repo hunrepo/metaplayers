@@ -1,0 +1,44 @@
+{
+    "name": "Exodus+",
+    "plugin": "plugin.video.exodusplus",
+    "movies": [
+        [
+            {
+                "link": "plugin://plugin.video.exodusplus/?action=movieSearch&query={title}",
+                "steps": [
+                    ".*{title}.*{year}.*"
+                ],
+                "action": "PLAY"
+            },
+            {
+                "link": "plugin://plugin.video.exodusplus/?action=movieSearch&query={title}",
+                "steps": [
+                    ".*{title}.*{year}.*"
+                ],
+                "action": "ACTIVATE"
+            }
+        ]
+    ],
+    "tvshows": [
+        [
+            {
+                "link": "plugin://plugin.video.exodusplus/?action=tvSearch&query={clearname}",
+                "steps": [
+                    ".*{clearname}.*",
+                    ".*$${season}",
+                    "($$.*$$)+{season}x{episode:02d}$$.*"
+                ],
+                "action": "PLAY"
+            },
+            {
+                "link": "plugin://plugin.video.exodusplus/?action=tvSearch&query={clearname}",
+                "steps": [
+                    ".*{clearname}.*",
+                    ".*$${season}",
+                    "($$.*$$)+{season}x{episode:02d}$$.*"
+                ],
+                "action": "ACTIVATE"
+            }
+        ]
+    ]
+}
