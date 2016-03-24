@@ -1,0 +1,28 @@
+{
+    "name": "Velocity",
+    "plugin": "plugin.video.velocity",
+	"movies": [
+        [
+            {
+                "link": "plugin://plugin.video.velocity/?mode=trakt_search_movies&url={title}",
+				"steps": [
+					".*{title}.*({year}).*"
+				],
+				"action": "ACTIVATE"
+            }
+        ]
+	],
+    "tvshows": [
+        [
+            {
+                "link": "plugin://plugin.video.velocity/?mode=trakt_search_shows&url={clearname}",
+				"steps": [
+					".*{clearname}.*({year}).*",
+					"Season {season}",
+					"S{season}E{episode}$$.*"
+                ],
+				"action": "ACTIVATE"
+            }
+        ]
+    ]
+}

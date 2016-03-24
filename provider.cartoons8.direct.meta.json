@@ -1,0 +1,16 @@
+{
+    "name": "Cartoons8 (direct)",
+    "plugin": "plugin.video.cartoons8",
+    "tvshows": [
+        [
+            {
+                "link": "plugin://plugin.video.cartoons8/?mode=9&url=http://cartoons8.co/search/page/1?s={clearname_+}",
+				"steps": [
+                    ".*{clearname}.*{year}.*",
+					"(?:.*$${season}$${episode}|.*$${episode})"
+                ],
+				"action": "PLAY"
+            }
+        ]
+    ]
+}

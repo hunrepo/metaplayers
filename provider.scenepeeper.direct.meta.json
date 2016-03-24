@@ -1,0 +1,17 @@
+{
+    "name": "Scene Peeper (direct)",
+    "plugin": "plugin.video.mdscenepeeper",
+	"movies": [
+        [
+            {
+                "link": "plugin://plugin.video.mdscenepeeper",
+				"steps": [
+					".*SEARCH.*",
+					"keyboard: {title}",
+					".*{title}.*{year}.*"
+				],
+				"action": "PLAY"
+            }
+        ]
+	]
+}

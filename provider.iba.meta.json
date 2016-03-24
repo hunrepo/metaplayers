@@ -1,0 +1,21 @@
+{
+    "name": "[COLOR FF418106]הערוץ הראשון[/COLOR]",
+    "plugin": "plugin.video.IBA",
+    "filters": {
+        "network": "הערוץ הראשון"
+    },
+    "tvshows": [
+        [
+            {
+                "language": "he",
+                "link": "plugin://plugin.video.IBA/",
+                "steps": [
+                    "{showname}",
+                    ".*עונה {season}",
+                    "(?:{showname}|פרקים מלאים)",
+                    ".*פרק {episode}"
+                ]
+            }
+        ]
+    ]
+}

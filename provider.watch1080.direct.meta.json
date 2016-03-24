@@ -1,0 +1,15 @@
+{
+    "name": "Watch 1080p",
+    "plugin": "plugin.video.watch1080",
+	"movies": [
+        [
+            {
+                "link": "plugin://plugin.video.watch1080/?mode=1&url=http://watch1080p.com/search/{title_escaped}",
+				"steps": [
+					".*{title}.*{year}.*"
+				],
+				"action": "PLAY"
+            }
+        ]
+	]
+}

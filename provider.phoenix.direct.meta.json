@@ -1,0 +1,39 @@
+{
+    "name": "Phoenix (direct)",
+    "plugin": "plugin.video.phstreams",
+	"movies": [
+        [
+            {
+                "link": "plugin://plugin.video.phstreams/?action=searchDirectory2&url={title}",
+				"steps": [
+					".*"
+				],
+				"action": "PLAY"
+            }
+        ]
+	],
+    "tvshows": [
+        [
+		    {
+                "link": "plugin://plugin.video.phstreams/?action=searchDirectory2&url={showname}",
+				"steps": [
+                    			"{clearname}.*",
+					".*{season}.*",
+					".*S{season:02d}E{episode:02d}.*",
+					".*"
+                ],
+				"action": "PLAY"
+            },
+            {
+                "link": "plugin://plugin.video.phstreams/?action=searchDirectory2&url={showname}",
+				"steps": [
+                    			"{clearname}.*",
+		    			".*{season}.*",
+					".*{season}.*{episode}.*",
+					".*"
+                ],
+				"action": "PLAY"
+            }
+        ]
+    ]
+}

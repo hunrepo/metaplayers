@@ -1,0 +1,15 @@
+{
+    "name": "WABC Programs",
+    "plugin": "plugin.video.wabc",
+    "tvshows": [
+        [
+            {
+                "link": "plugin://plugin.video.wabc",
+				"steps": [
+                    "(?:{clearname}|{clearname|replace(',’)})",
+					"{season}x{episode}"
+                ]
+            }
+        ]
+    ]
+}

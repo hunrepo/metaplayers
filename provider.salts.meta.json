@@ -1,0 +1,28 @@
+{
+    "name": "SALTS",
+    "plugin": "plugin.video.salts",
+	"movies": [
+        [
+            {
+                "link": "plugin://plugin.video.salts/?mode=search_results&section=Movies&query={title}",
+				"steps": [
+					"{title}.*({year}).*"
+				],
+				"action": "ACTIVATE"
+            }
+        ]
+	],
+    "tvshows": [
+        [
+            {
+                "link": "plugin://plugin.video.salts/?mode=search_results&section=TV&query={clearname}",
+				"steps": [
+                    "{clearname}.*({year}).*",
+					"Season {season}",
+					"{season}x{episode}$$.*"
+                ],
+				"action": "ACTIVATE"
+            }
+        ]
+    ]
+}

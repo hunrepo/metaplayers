@@ -1,0 +1,21 @@
+{
+    "name": "UMP(tvdb)",
+    "plugin": "plugin.program.ump",
+    "tvshows": [
+        [
+            {
+                "link": "plugin://plugin.program.ump",
+				"steps": [
+					"video",
+					"tvdb",
+					"Search",
+					"keyboard: {clearname}",
+					"{clearname}",
+					"Season {season}",
+					"{season}x{episode}$$.*"
+                ],
+				"action": "ACTIVATE"
+            }
+        ]
+    ]
+}

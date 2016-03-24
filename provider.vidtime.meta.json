@@ -1,0 +1,31 @@
+{
+    "name": "VidTime (direct)",
+    "plugin": "plugin.video.VidTime",
+	"movies": [
+        [
+            {
+                "link": "plugin://plugin.video.VidTime/",
+				"steps": [
+					".*SEARCH.*",
+					"keyboard: {title}",
+					"$$B$${title}$$/B$$"
+				],
+				"action": "ACTIVATE"
+            }
+        ]
+	],
+    "tvshows": [
+        [
+            {
+                "link": "plugin://plugin.video.VidTime/",
+				"steps": [
+					".*SEARCH.*",
+					"keyboard: {clearname}",
+					"($$.*$$)+{clearname}$$($$.*$$)TV SERIES.*",
+					".*{clearname} S{season:02d}E{episode:02d}.*"
+                ],
+				"action": "PLAY"
+            }
+        ]
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "The Royal We (direct)",
+    "plugin": "plugin.video.theroyalwe",
+	"movies": [
+        [
+            {
+                "link": "plugin://plugin.video.theroyalwe/?mode=movie_search",
+				"steps": [
+					"keyboard:{title}",
+					"{title}",
+					".*"
+				],
+				"action": "PLAY"
+            }
+        ]
+	],
+    "tvshows": [
+        [
+            {
+                "link": "plugin://plugin.video.theroyalwe/?mode=tv_search",
+				"steps": [
+					"keyboard: {clearname}",
+                    ".*{clearname}.*",
+					"Season {season}",
+					"{episode}$$.*",
+					".*"
+                ],
+				"action": "PLAY"
+            }
+        ]
+    ]
+}

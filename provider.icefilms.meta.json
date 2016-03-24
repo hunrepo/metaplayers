@@ -1,0 +1,19 @@
+{
+    "name": "Icefilms",
+    "plugin": "plugin.video.icefilms",
+    "tvshows": [
+        [
+            {
+                "link": "plugin://plugin.video.icefilms",
+				"steps": [
+                    "Search",
+                    "keyboard: {clearname}",
+					"{clearname}$$.*",
+					".*Season$${season}$$.*",
+					"{season}x{episode:02d}.*"
+                ],
+				"action": "ACTIVATE"
+            }
+        ]
+    ]
+}

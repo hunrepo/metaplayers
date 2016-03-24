@@ -1,0 +1,18 @@
+{
+    "name": "Exodus (direct)",
+    "plugin": "plugin.video.exodus",
+    "movies": [
+        [
+            {
+                "link": "plugin://plugin.video.exodus/?action=play&title={title}&year={year}&imdb={imdb}"
+            }
+        ]
+    ],
+    "tvshows": [
+        [
+            {
+                   "link": "plugin://plugin.video.exodus/?action=play&title={title}&year={year}&imdb={imdb}&tvdb={tvdb}&season={season}&episode={episode}&tvshowtitle={clearname}"
+            }
+        ]
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "name": "M4U (direct)",
+    "plugin": "plugin.video.mdm4u",
+	"movies": [
+        [
+            {
+                "link": "plugin://plugin.video.mdm4u/?url=http://m4ufree.info/tag/{title_-}&mode=11",
+				"steps": [
+					".*{title}.*({year}).*"
+				],
+				"action": "PLAY"
+            }
+        ]
+	],
+    "tvshows": [
+        [
+            {
+                "link": "plugin://plugin.video.mdm4u/?url=http://m4ufree.info/tagtvs/{clearname_-}&mode=11",
+				"steps": [
+					".*{clearname}.*",
+					".*S{season:02d}-E{episode:02d}.*"
+                ],
+				"action": "PLAY"
+            }
+        ]
+    ]
+}

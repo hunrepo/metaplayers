@@ -1,0 +1,16 @@
+{
+    "name": "WNBC Programs",
+    "plugin": "plugin.video.wnbc",
+    "tvshows": [
+        [
+            {
+                "link": "plugin://plugin.video.wnbc",
+				"steps": [
+                    "{clearname}.*",
+					"(?:full +episode|season {season}$$).*",
+					"{season}x{episode}"
+                ]
+            }
+        ]
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "name": "UMP(ann)",
+    "plugin": "plugin.program.ump",
+	"movies": [
+        [
+            {
+                "link": "plugin://plugin.program.ump",
+				"steps": [
+					"video",
+					"ann",
+					"Search",
+					"keyboard: {title}",
+					".*"
+				],
+				"action": "ACTIVATE"
+            }
+        ]
+	],
+    "tvshows": [
+        [
+            {
+                "link": "plugin://plugin.program.ump",
+				"steps": [
+					"video",
+					"ann",
+					"Search",
+					"keyboard: {clearname}",
+					".*{clearname}$$.*",
+					"{episode}$$.*"
+                ],
+				"action": "ACTIVATE"
+            }
+        ]
+    ]
+}

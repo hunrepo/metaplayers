@@ -1,0 +1,36 @@
+{
+    "name": "UMP(imdb)",
+    "plugin": "plugin.program.ump",
+	"movies": [
+        [
+            {
+                "link": "plugin://plugin.program.ump",
+				"steps": [
+					"video",
+					"imdb",
+					"Search Movies",
+					"keyboard: {title}",
+					"{title}"
+				],
+				"action": "ACTIVATE"
+            }
+        ]
+	],
+    "tvshows": [
+        [
+            {
+                "link": "plugin://plugin.program.ump",
+				"steps": [
+					"video",
+					"imdb",
+					"Search Series",
+					"keyboard: {clearname}",
+					"{clearname}",
+					".*{season}",
+					"{episode}$$.*"
+                ],
+				"action": "ACTIVATE"
+            }
+        ]
+    ]
+}

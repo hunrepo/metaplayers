@@ -1,0 +1,15 @@
+{
+    "name": "WCBS Programs",
+    "plugin": "plugin.video.wcbs",
+    "tvshows": [
+        [
+            {
+                "link": "plugin://plugin.video.wcbs",
+				"steps": [
+                    "{clearname}.*",
+					"{season}x{episode}"
+                ]
+            }
+        ]
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "name": "UK Turk Playlists (direct)",
+    "plugin": "plugin.video.ukturk",
+	"movies": [
+        [
+            {
+                "link": "plugin://plugin.video.ukturk",
+				"steps": [
+					"($$.*$$)*Search($$.*$$)*",
+					"keyboard: {title}",
+					".*{title}.*"
+				],
+				"action": "PLAY"
+            }
+        ]
+	],
+	"tvshows": [
+        [
+            {
+                "link": "plugin://plugin.video.ukturk/",
+				"steps": [
+					"($$.*$$)*Search($$.*$$)*",
+					"keyboard: {clearname}",
+					"($$.*$$)*{clearname}($$.*$$)*",
+					".*S{season:02d}E{episode:02d}.*"
+                ],
+				"action": "PLAY"
+            }
+        ]
+    ]
+}

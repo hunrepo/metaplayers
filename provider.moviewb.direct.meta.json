@@ -1,0 +1,27 @@
+{
+    "name": "MovieWB (direct)",
+    "plugin": "plugin.video.mdmoviewb",
+	"movies": [
+        [
+            {
+                "link": "plugin://plugin.video.mdmoviewb/?url=http://moviewb.net/search-movies/{title_+}.html&mode=1",
+				"steps": [
+					".*{title}.*{year}.*"
+				],
+				"action": "PLAY"
+            }
+        ]
+	],
+    "tvshows": [
+        [
+            {
+                "link": "plugin://plugin.video.mdmoviewb/?url=http://moviewb.net/search-movies/{clearname_+}.html&mode=1",
+				"steps": [
+					".*{clearname}.*Season {season}.*",
+					".*Episode$$.*$${episode}$$.*"
+                ],
+				"action": "PLAY"
+            }
+        ]
+    ]
+}

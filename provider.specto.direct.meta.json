@@ -1,0 +1,30 @@
+{
+    "name": "Specto (direct)",
+    "plugin": "plugin.video.specto",
+	"movies": [
+        [
+            {
+                "link": "plugin://plugin.video.specto/?action=movieSearch&query={title}",
+				"steps": [
+					".*{title}.*{year}.*",
+					".*"
+				],
+				"action": "PLAY"
+            }
+        ]
+	],
+    "tvshows": [
+        [
+            {
+                "link": "plugin://plugin.video.specto/?action=tvSearch&query={clearname}",
+				"steps": [
+                    "{clearname}",
+                    "Season {season}",
+					"{season}x{episode:02d}$$.*",
+					".*"
+                ],
+				"action": "PLAY"
+            }
+        ]
+    ]
+}

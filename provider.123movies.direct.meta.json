@@ -1,0 +1,27 @@
+{
+    "name": "123Movies (direct)",
+    "plugin": "plugin.video.md123movies",
+	"movies": [
+        [
+            {
+                "link": "plugin://plugin.video.md123movies/?mode=8&url=url&query={title_escaped}",
+				"steps": [
+					".*{title}.*"
+				],
+				"action": "PLAY"
+            }
+        ]
+	],
+	"tvshows": [
+        [
+            {
+                "link": "plugin://plugin.video.md123movies/?mode=8&url=url&query={clearname_escaped}",
+				"steps": [
+                    "($$.*$$)+{clearname} -.*Season {season}($$.*$$)+",
+					"($$.*$$)+Episode {episode}:($$.*$$)+"
+                ],
+				"action": "PLAY"
+            }
+        ]
+    ]
+}

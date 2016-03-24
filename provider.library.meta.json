@@ -1,0 +1,17 @@
+{
+    "name": "Library",
+    "tvshows": [
+        [
+            {
+                "link": "tvshows"
+            }
+        ]
+    ],
+    "movies": [
+        [
+            {
+                "link": "movies"
+            }
+        ]
+    ]
+}
